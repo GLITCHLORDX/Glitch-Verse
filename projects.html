@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Glitch Lord</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.svg" alt="Glitch Lord Logo" class="logo">
+      <span class="site-title">GlitchVerse</span>
+    </div>
+    <nav class="navbar">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link active">Projects</a>
+      <a href="glitchlogs.html" class="nav-link">GlitchLogs</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1 class="glitch" data-text="Projects">Projects</h1>
+      <p class="tagline">Digital experiments, games, and tools from the Glitch Lord.</p>
+    </section>
+    <section>
+      <div class="project-cards">
+        <div class="project-card glitch-hover">
+          <h3>Games</h3>
+          <ul>
+            <li><strong>Neon Runner</strong> – A cyberpunk endless runner with glitch portals.</li>
+            <li><strong>Glitch Escape</strong> – Puzzle platformer where bugs are features.</li>
+          </ul>
+        </div>
+        <div class="project-card glitch-hover">
+          <h3>Apps</h3>
+          <ul>
+            <li><strong>AnonMail</strong> – Send encrypted messages, no trace left behind.</li>
+            <li><strong>CodePulse</strong> – Real-time code visualizer with glitch effects.</li>
+          </ul>
+        </div>
+        <div class="project-card glitch-hover">
+          <h3>Web</h3>
+          <ul>
+            <li><strong>404 Glitch</strong> – Interactive error page generator.</li>
+            <li><strong>Terminal Portfolio</strong> – Terminal-style personal site template.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <canvas id="code-bg"></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="glitch.js"></script>
+</body>
+</html>

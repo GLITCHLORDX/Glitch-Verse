@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlitchLogs | Glitch Lord</title>
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="logo-container">
+      <img src="logo.svg" alt="Glitch Lord Logo" class="logo">
+      <span class="site-title">GlitchVerse</span>
+    </div>
+    <nav class="navbar">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="about.html" class="nav-link">About</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="glitchlogs.html" class="nav-link active">GlitchLogs</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <h1 class="glitch" data-text="GlitchLogs">GlitchLogs</h1>
+      <p class="tagline">Logs from the digital shadows. Hack the signal.</p>
+    </section>
+    <section>
+      <article class="glitch-paragraph">
+        <h3 class="glitch-hover">[2024-06-01] // SYSTEM BREACH</h3>
+        <p>Accessed a forgotten node in the deep web. Data fragments recovered. Glitch anomaly detected. More to come.</p>
+      </article>
+      <article class="glitch-paragraph">
+        <h3 class="glitch-hover">[2024-05-27] // CODE LEAK</h3>
+        <p>Released a new tool: <span class="glitch">CodePulse</span>. Visualize your code in real time. Source is chaos.</p>
+      </article>
+      <article class="glitch-paragraph">
+        <h3 class="glitch-hover">[2024-05-20] // GLITCH ART</h3>
+        <p>Experimented with generative glitch art. The boundary between bug and feature is thin. See <a href="projects.html" class="nav-link">Projects</a>.</p>
+      </article>
+    </section>
+  </main>
+  <canvas id="code-bg"></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="glitch.js"></script>
+</body>
+</html>
