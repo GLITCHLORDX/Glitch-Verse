@@ -3,69 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GlitchVerse | Glitch Lord</title>
-  <link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <title>My Site with AdSense</title>
+
+  <!-- Google AdSense -->
+  <script async 
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2671231160324600"
+    crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    .ad-container {
+      margin: 20px auto;
+      max-width: 728px;
+    }
+  </style>
 </head>
 <body>
-  <div id="glitch-animation" class="glitch-animation">
-    <div class="glitch-text" data-text="Anomaly Detected. Welcome to GlitchVerse.">Anomaly Detected. Welcome to GlitchVerse.</div>
+  <h1>🚀 Welcome to My Website</h1>
+  <p>This is a test page with Google AdSense ads integrated.</p>
+
+  <!-- AdSense Banner -->
+  <div class="ad-container">
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-2671231160324600"
+         data-ad-slot="1234567890"  <!-- Replace with your Ad Slot ID -->
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
   </div>
-  <header>
-    <div class="logo-container">
-      <img src="logo.svg" alt="Glitch Lord Logo" class="logo">
-      <span class="site-title">GlitchVerse</span>
-    </div>
-    <nav class="navbar">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="about.html" class="nav-link">About</a>
-      <a href="projects.html" class="nav-link">Projects</a>
-      <a href="glitchlogs.html" class="nav-link">GlitchLogs</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-      <a hrefl class="nav-link">ga>
-    </nav>
-  </header>
-  <main>
-    <section class="hero">
-      <h1 class="glitch" data-text="Glitch Lord">Glitch Lord</h1>
-      <p class="tagline">Anomaly Detected. Welcome to GlitchVerse.</p>
-    </section>
-    <section class="about-preview">
-      <h2>Who is Glitch Lord?</h2>
-      <p class="glitch-paragraph">A digital phantom, architect of chaos, weaving code and glitches into art. Explore the anomaly.</p>
-      <a href="about.html" class="btn-glitch">Learn More</a>
-    </section>
-    <section class="projects-preview">
-      <h2>Projects</h2>
-      <div class="project-cards">
-        <div class="project-card glitch-hover">
-          <h3>Games</h3>
-          <p>Cyberpunk-inspired indie games with a twist of digital corruption.</p>
-        </div>
-        <div class="project-card glitch-hover">
-          <h3>Apps</h3>
-          <p>Tools for hackers, creators, and digital explorers.</p>
-        </div>
-        <div class="project-card glitch-hover">
-          <h3>Web</h3>
-          <p>Experimental web experiences that bend reality.</p>
-        </div>
-      </div>
-      <a href="projects.html" class="btn-glitch">View All Projects</a>
-    </section>
-    <section class="glitchlogs-preview">
-      <h2>GlitchLogs</h2>
-      <p class="glitch-paragraph">Dive into the logs of a digital renegade. Hacker-style blog posts, code leaks, and more.</p>
-      <a href="glitchlogs.html" class="btn-glitch">Read GlitchLogs</a>
-    </section>
-    <section class="contact-preview">
-      <h2>Contact</h2>
-      <p class="glitch-paragraph">Reach out—anonymously, if you wish. The network is always listening.</p>
-      <a href="contact.html" class="btn-glitch">Contact Glitch Lord</a>
-    </section>
-  </main>
-  <canvas id="code-bg"></canvas>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="glitch.js"></script>
+
 </body>
 </html>
