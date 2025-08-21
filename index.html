@@ -3,180 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Writing & Mail Transformer</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      background: #121212;
-      color: #f0f0f0;
-    }
+  <title>GlitchVerse | Glitch Lord</title>
+  <meta name="description" content="GlitchVerse - Explore the digital anomaly of Glitch Lord: projects, blogs, and creative chaos.">
+  <meta name="keywords" content="Glitch Lord, Cyberpunk, Projects, Blogs, Hacking, Coding, Digital Art">
+  <meta name="author" content="Glitch Lord">
 
-    header {
-      text-align: center;
-      padding: 20px;
-      background: #1e1e1e;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-      color: #00e676;
-    }
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
 
-    main {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-      padding: 20px;
-    }
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
 
-    section {
-      background: #1c1c1c;
-      border-radius: 12px;
-      padding: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
-    }
+  <!-- Google AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXX"
+     crossorigin="anonymous"></script>
 
-    h2 {
-      color: #00e5ff;
-      margin-bottom: 10px;
-    }
-
-    textarea {
-      width: 100%;
-      height: 150px;
-      border: none;
-      border-radius: 8px;
-      padding: 10px;
-      resize: none;
-      font-size: 1rem;
-      background: #2a2a2a;
-      color: #f0f0f0;
-      outline: none;
-    }
-
-    select, button {
-      margin-top: 10px;
-      padding: 10px 15px;
-      font-size: 1rem;
-      border-radius: 8px;
-      border: none;
-      cursor: pointer;
-    }
-
-    select {
-      background: #2c2c2c;
-      color: #fff;
-    }
-
-    button {
-      background: #00e676;
-      color: #121212;
-      font-weight: bold;
-      transition: 0.2s;
-    }
-
-    button:hover {
-      background: #00c853;
-    }
-
-    .output {
-      margin-top: 10px;
-      background: #2a2a2a;
-      padding: 10px;
-      border-radius: 8px;
-      min-height: 80px;
-      white-space: pre-wrap;
-    }
-
-    @media(max-width: 900px) {
-      main {
-        grid-template-columns: 1fr;
+  <!-- Consent for GDPR/CCPA -->
+  <script>
+    window.onload = function() {
+      if (!localStorage.getItem("cookieConsent")) {
+        document.getElementById("cookie-banner").style.display = "block";
       }
     }
-  </style>
+    function acceptCookies() {
+      localStorage.setItem("cookieConsent", "true");
+      document.getElementById("cookie-banner").style.display = "none";
+    }
+  </script>
 </head>
 <body>
+  <!-- Cookie Consent -->
+  <div id="cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;background:#111;color:#fff;padding:15px;text-align:center;z-index:1000;">
+    This site uses cookies for analytics and ads. By continuing, you agree to our 
+    <a href="#privacy" style="color:#0ff;">Privacy Policy</a>.
+    <button onclick="acceptCookies()" style="margin-left:15px;padding:5px 10px;background:#0ff;border:none;cursor:pointer;">Accept</button>
+  </div>
+
+  <!-- Glitch Intro -->
+  <div id="glitch-animation" class="glitch-animation">
+    <div class="glitch-text" data-text="Anomaly Detected. Welcome to GlitchVerse.">Anomaly Detected. Welcome to GlitchVerse.</div>
+  </div>
+
+  <!-- Header -->
   <header>
-    <h1>AI Writing & Mail Transformer ✨</h1>
-    <p>Transform text tone & write emails with style</p>
+    <div class="logo-container">
+      <img src="logo.svg" alt="Glitch Lord Logo" class="logo">
+      <span class="site-title">GlitchVerse</span>
+    </div>
+    <nav class="navbar">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#glitchlogs" class="nav-link">GlitchLogs</a>
+      <a href="#contact" class="nav-link">Contact</a>
+      <a href="#privacy" class="nav-link">Privacy Policy</a>
+    </nav>
   </header>
 
+  <!-- Main Content -->
   <main>
-    <!-- Writing Tone Transformer -->
-    <section>
-      <h2>📝 Text Tone Transformer</h2>
-      <textarea id="inputText" placeholder="Enter text here..."></textarea>
-      <br>
-      <select id="toneSelect">
-        <option value="formal">Formal</option>
-        <option value="casual">Casual</option>
-        <option value="professional">Professional</option>
-        <option value="friendly">Friendly</option>
-        <option value="funny">Funny</option>
-        <option value="poetic">Poetic</option>
-        <option value="simplified">Simplified</option>
-      </select>
-      <button onclick="transformText()">Transform</button>
-      <div id="outputText" class="output"></div>
+    <section id="home" class="hero">
+      <h1 class="glitch" data-text="Glitch Lord">Glitch Lord</h1>
+      <p class="tagline">Anomaly Detected. Welcome to GlitchVerse.</p>
     </section>
 
-    <!-- AI Mail Writer -->
-    <section>
-      <h2>📧 AI Mail Writer</h2>
-      <textarea id="mailInput" placeholder="Enter email content (idea, bullet points, draft)..."></textarea>
-      <br>
-      <select id="mailToneSelect">
-        <option value="formal">Formal</option>
-        <option value="casual">Casual</option>
-        <option value="professional">Professional</option>
-        <option value="friendly">Friendly</option>
-        <option value="funny">Funny</option>
-        <option value="poetic">Poetic</option>
-        <option value="simplified">Simplified</option>
-      </select>
-      <button onclick="generateMail()">Generate Mail</button>
-      <div id="mailOutput" class="output"></div>
+    <section id="about" class="about-preview">
+      <h2>Who is Glitch Lord?</h2>
+      <p class="glitch-paragraph">A digital phantom, architect of chaos, weaving code and glitches into art. Explore the anomaly.</p>
+    </section>
+
+    <section id="projects" class="projects-preview">
+      <h2>Projects</h2>
+      <div class="project-cards">
+        <div class="project-card glitch-hover">
+          <h3>Games</h3>
+          <p>Cyberpunk-inspired indie games with a twist of digital corruption.</p>
+        </div>
+        <div class="project-card glitch-hover">
+          <h3>Apps</h3>
+          <p>Tools for hackers, creators, and digital explorers.</p>
+        </div>
+        <div class="project-card glitch-hover">
+          <h3>Web</h3>
+          <p>Experimental web experiences that bend reality.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="glitchlogs" class="glitchlogs-preview">
+      <h2>GlitchLogs</h2>
+      <p class="glitch-paragraph">Dive into the logs of a digital renegade. Hacker-style blog posts, code leaks, and more.</p>
+    </section>
+
+    <section id="contact" class="contact-preview">
+      <h2>Contact</h2>
+      <p class="glitch-paragraph">Reach out—anonymously, if you wish. The network is always listening.</p>
+      <p>Email: <a href="mailto:glitchlord@protonmail.com">glitchlord@protonmail.com</a></p>
+    </section>
+
+    <!-- Privacy Policy -->
+    <section id="privacy" class="privacy-policy">
+      <h2>Privacy Policy</h2>
+      <p>We value your privacy. GlitchVerse uses cookies and Google AdSense to deliver a better experience and relevant ads. Your data is not sold or misused.</p>
+      <p>By using this site, you consent to our Privacy Policy.</p>
     </section>
   </main>
 
-  <script>
-    // Example tone transformation logic
-    function applyTone(text, tone) {
-      switch(tone) {
-        case "formal":
-          return "Dear Sir/Madam,\n\n" + text.replace(/hi|hello/gi, "Greetings").replace(/thanks/gi, "Thank you very much") + "\n\nSincerely.";
-        case "casual":
-          return text.replace(/Greetings|Dear/gi, "Hey").replace(/Sincerely/gi, "Cheers") + " 😎";
-        case "professional":
-          return "Subject: Important Update\n\n" + text.replace(/okay/gi, "understood").replace(/thanks/gi, "Thank you for your cooperation") + "\n\nBest Regards.";
-        case "friendly":
-          return text + "\n\nTake care, buddy! 😊";
-        case "funny":
-          return text + "\n\nP.S. If this doesn’t make sense, blame my coffee ☕😂";
-        case "poetic":
-          return "✨ " + text.replace(/\./g, "...\n") + "\nLike stars in the night sky ✨";
-        case "simplified":
-          return text.replace(/difficult|complicated/gi, "easy").replace(/utilize/gi, "use").replace(/approximately/gi, "about");
-        default:
-          return text;
-      }
-    }
+  <footer style="text-align:center;padding:20px;background:#111;color:#aaa;">
+    &copy; 2025 GlitchVerse | Glitch Lord
+  </footer>
 
-    function transformText() {
-      let input = document.getElementById("inputText").value;
-      let tone = document.getElementById("toneSelect").value;
-      let output = applyTone(input, tone);
-      document.getElementById("outputText").innerText = output;
-    }
-
-    function generateMail() {
-      let input = document.getElementById("mailInput").value;
-      let tone = document.getElementById("mailToneSelect").value;
-      let mail = applyTone(input, tone);
-      document.getElementById("mailOutput").innerText = mail;
-    }
-  </script>
+  <!-- Background Canvas + Animations -->
+  <canvas id="code-bg"></canvas>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="glitch.js"></script>
 </body>
 </html>
