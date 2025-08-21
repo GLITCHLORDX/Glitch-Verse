@@ -3,237 +3,180 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GlitchVerse | Glitch Lord</title>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
-
+  <title>AI Writing & Mail Transformer</title>
   <style>
-    /* ===== Reset & Base ===== */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      font-family: 'IBM Plex Mono', monospace;
-      background: #000;
-      color: #d400ff;
-      overflow-x: hidden;
-      position: relative;
-    }
-    a { text-decoration: none; color: #d400ff; }
-
-    /* ===== Background Canvas ===== */
-    #code-bg {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      z-index: -1;
-      background: #000;
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: #121212;
+      color: #f0f0f0;
     }
 
-    /* ===== Glitch Text ===== */
-    .glitch {
-      position: relative;
-      font-family: 'VT323', monospace;
-      color: #d400ff;
-      font-size: 3rem;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-shadow: 0 0 10px #d400ff, 0 0 20px #ff00ff;
-      animation: flicker 2s infinite;
-    }
-    @keyframes flicker {
-      0%, 18%, 22%, 25%, 53%, 57%, 100% { opacity: 1; }
-      20%, 24%, 55% { opacity: 0.4; }
-    }
-
-    /* ===== Header ===== */
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 30px;
-      border-bottom: 2px solid #d400ff;
-      background: rgba(0, 0, 0, 0.8);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .logo {
-      width: 40px;
-      filter: drop-shadow(0 0 8px #d400ff);
-    }
-    .site-title {
-      font-size: 1.5rem;
-      font-family: 'VT323', monospace;
-      color: #d400ff;
-    }
-    .navbar {
-      display: flex;
-      gap: 20px;
-    }
-    .nav-link {
-      position: relative;
-      font-weight: bold;
-    }
-    .nav-link::after {
-      content: "";
-      position: absolute;
-      left: 0; bottom: -2px;
-      width: 0; height: 2px;
-      background: #ff00ff;
-      transition: width 0.3s;
-    }
-    .nav-link:hover::after { width: 100%; }
-
-    /* ===== Sections ===== */
-    section {
-      padding: 80px 20px;
       text-align: center;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 { font-size: 2rem; margin-bottom: 15px; color: #ff00ff; text-shadow: 0 0 10px #9d00ff; }
-    p { margin-bottom: 20px; line-height: 1.6; }
-
-    /* ===== Buttons ===== */
-    .btn-glitch {
-      display: inline-block;
-      padding: 12px 24px;
-      border: 2px solid #d400ff;
-      background: transparent;
-      color: #d400ff;
-      font-weight: bold;
-      text-transform: uppercase;
-      transition: all 0.3s;
-      position: relative;
-    }
-    .btn-glitch:hover {
-      background: #d400ff;
-      color: #000;
-      text-shadow: 0 0 10px #000;
-      box-shadow: 0 0 20px #ff00ff;
-    }
-
-    /* ===== Projects Grid ===== */
-    .project-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-    .project-card {
       padding: 20px;
-      border: 2px solid #d400ff;
-      background: rgba(0, 0, 0, 0.7);
-      transition: transform 0.3s, box-shadow 0.3s;
+      background: #1e1e1e;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
     }
-    .project-card:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px #ff00ff;
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      color: #00e676;
     }
 
-    /* ===== Ad Box Styling ===== */
-    .ad-box {
-      margin: 40px auto;
-      border: 2px dashed #d400ff;
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    section {
+      background: #1c1c1c;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+    }
+
+    h2 {
+      color: #00e5ff;
+      margin-bottom: 10px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 150px;
+      border: none;
+      border-radius: 8px;
       padding: 10px;
-      max-width: 700px;
+      resize: none;
+      font-size: 1rem;
+      background: #2a2a2a;
+      color: #f0f0f0;
+      outline: none;
+    }
+
+    select, button {
+      margin-top: 10px;
+      padding: 10px 15px;
+      font-size: 1rem;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+    }
+
+    select {
+      background: #2c2c2c;
+      color: #fff;
+    }
+
+    button {
+      background: #00e676;
+      color: #121212;
+      font-weight: bold;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      background: #00c853;
+    }
+
+    .output {
+      margin-top: 10px;
+      background: #2a2a2a;
+      padding: 10px;
+      border-radius: 8px;
+      min-height: 80px;
+      white-space: pre-wrap;
+    }
+
+    @media(max-width: 900px) {
+      main {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <!-- Header -->
   <header>
-    <div class="logo-container">
-      <img src="logo.svg" alt="Glitch Lord Logo" class="logo">
-      <span class="site-title">GlitchVerse</span>
-    </div>
-    <nav class="navbar">
-      <a href="#home" class="nav-link">Home</a>
-      <a href="#about" class="nav-link">About</a>
-      <a href="#projects" class="nav-link">Projects</a>
-      <a href="#glitchlogs" class="nav-link">GlitchLogs</a>
-      <a href="#contact" class="nav-link">Contact</a>
-    </nav>
+    <h1>AI Writing & Mail Transformer ✨</h1>
+    <p>Transform text tone & write emails with style</p>
   </header>
 
   <main>
-    <!-- Hero -->
-    <section class="hero" id="home">
-      <h1 class="glitch">Glitch Lord</h1>
-      <p class="tagline">Anomaly Detected. Welcome to GlitchVerse.</p>
+    <!-- Writing Tone Transformer -->
+    <section>
+      <h2>📝 Text Tone Transformer</h2>
+      <textarea id="inputText" placeholder="Enter text here..."></textarea>
+      <br>
+      <select id="toneSelect">
+        <option value="formal">Formal</option>
+        <option value="casual">Casual</option>
+        <option value="professional">Professional</option>
+        <option value="friendly">Friendly</option>
+        <option value="funny">Funny</option>
+        <option value="poetic">Poetic</option>
+        <option value="simplified">Simplified</option>
+      </select>
+      <button onclick="transformText()">Transform</button>
+      <div id="outputText" class="output"></div>
     </section>
 
-    <!-- About -->
-    <section id="about">
-      <h2>Who is Glitch Lord?</h2>
-      <p>A digital phantom, architect of chaos, weaving code and glitches into art. Explore the anomaly.</p>
-      <a href="#projects" class="btn-glitch">Learn More</a>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="project-cards">
-        <div class="project-card"><h3>Games</h3><p>Cyberpunk-inspired indie games with a twist of digital corruption.</p></div>
-        <div class="project-card"><h3>Apps</h3><p>Tools for hackers, creators, and digital explorers.</p></div>
-        <div class="project-card"><h3>Web</h3><p>Experimental web experiences that bend reality.</p></div>
-      </div>
-      <a href="#glitchlogs" class="btn-glitch">View All Projects</a>
-    </section>
-
-    <!-- GlitchLogs -->
-    <section id="glitchlogs">
-      <h2>GlitchLogs</h2>
-      <p>Dive into the logs of a digital renegade. Hacker-style blog posts, code leaks, and more.</p>
-      <a href="#contact" class="btn-glitch">Read GlitchLogs</a>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Reach out—anonymously, if you wish. The network is always listening.</p>
-      <a href="mailto:glitchlord@protonmail.com" class="btn-glitch">Contact Glitch Lord</a>
+    <!-- AI Mail Writer -->
+    <section>
+      <h2>📧 AI Mail Writer</h2>
+      <textarea id="mailInput" placeholder="Enter email content (idea, bullet points, draft)..."></textarea>
+      <br>
+      <select id="mailToneSelect">
+        <option value="formal">Formal</option>
+        <option value="casual">Casual</option>
+        <option value="professional">Professional</option>
+        <option value="friendly">Friendly</option>
+        <option value="funny">Funny</option>
+        <option value="poetic">Poetic</option>
+        <option value="simplified">Simplified</option>
+      </select>
+      <button onclick="generateMail()">Generate Mail</button>
+      <div id="mailOutput" class="output"></div>
     </section>
   </main>
 
-  <canvas id="code-bg"></canvas>
-
-  <!-- Scripts -->
   <script>
-    /* Purple Matrix-style background */
-    const canvas = document.getElementById('code-bg');
-    const ctx = canvas.getContext('2d');
-    canvas.height = window.innerHeight;
-    canvas.width = window.innerWidth;
-
-    const letters = '01';
-    const fontSize = 14;
-    const columns = canvas.width / fontSize;
-    const drops = Array(Math.floor(columns)).fill(1);
-
-    function draw() {
-      ctx.fillStyle = 'rgba(0,0,0,0.05)';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#9d00ff'; // purple code
-      ctx.font = fontSize + 'px monospace';
-      for (let i = 0; i < drops.length; i++) {
-        const text = letters[Math.floor(Math.random() * letters.length)];
-        ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-        if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) drops[i] = 0;
-        drops[i]++;
+    // Example tone transformation logic
+    function applyTone(text, tone) {
+      switch(tone) {
+        case "formal":
+          return "Dear Sir/Madam,\n\n" + text.replace(/hi|hello/gi, "Greetings").replace(/thanks/gi, "Thank you very much") + "\n\nSincerely.";
+        case "casual":
+          return text.replace(/Greetings|Dear/gi, "Hey").replace(/Sincerely/gi, "Cheers") + " 😎";
+        case "professional":
+          return "Subject: Important Update\n\n" + text.replace(/okay/gi, "understood").replace(/thanks/gi, "Thank you for your cooperation") + "\n\nBest Regards.";
+        case "friendly":
+          return text + "\n\nTake care, buddy! 😊";
+        case "funny":
+          return text + "\n\nP.S. If this doesn’t make sense, blame my coffee ☕😂";
+        case "poetic":
+          return "✨ " + text.replace(/\./g, "...\n") + "\nLike stars in the night sky ✨";
+        case "simplified":
+          return text.replace(/difficult|complicated/gi, "easy").replace(/utilize/gi, "use").replace(/approximately/gi, "about");
+        default:
+          return text;
       }
     }
-    setInterval(draw, 33);
 
-    window.addEventListener('resize', () => {
-      canvas.height = window.innerHeight;
-      canvas.width = window.innerWidth;
-    });
+    function transformText() {
+      let input = document.getElementById("inputText").value;
+      let tone = document.getElementById("toneSelect").value;
+      let output = applyTone(input, tone);
+      document.getElementById("outputText").innerText = output;
+    }
+
+    function generateMail() {
+      let input = document.getElementById("mailInput").value;
+      let tone = document.getElementById("mailToneSelect").value;
+      let mail = applyTone(input, tone);
+      document.getElementById("mailOutput").innerText = mail;
+    }
   </script>
 </body>
 </html>
