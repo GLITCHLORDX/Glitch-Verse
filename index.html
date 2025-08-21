@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Messenger - Glassmorphic</title>
+  <title>Messenger - Neon</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: url("https://images.unsplash.com/photo-1503264116251-35a269479413?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80") no-repeat center/cover;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle at top, #0f2027, #203a43, #2c5364);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      backdrop-filter: blur(5px);
+      color: #fff;
     }
 
     .chat-container {
       width: 400px;
       height: 600px;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 20px;
-      backdrop-filter: blur(15px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      background: #0d1117;
+      border: 2px solid #0ff;
+      border-radius: 15px;
+      box-shadow: 0 0 20px #0ff;
       display: flex;
       flex-direction: column;
       overflow: hidden;
@@ -30,17 +30,17 @@
 
     .chat-header {
       padding: 15px;
-      background: rgba(255, 255, 255, 0.25);
+      background: #111;
       text-align: center;
       font-weight: bold;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 2px solid #0ff;
+      color: #0ff;
     }
 
     .chat-messages {
       flex: 1;
       padding: 15px;
       overflow-y: auto;
-      color: #fff;
     }
 
     .message {
@@ -52,20 +52,22 @@
     }
 
     .message.sent {
-      background: rgba(255, 255, 255, 0.4);
+      background: linear-gradient(45deg, #0ff, #08f);
       align-self: flex-end;
       color: #000;
+      box-shadow: 0 0 10px #0ff;
     }
 
     .message.received {
-      background: rgba(0, 0, 0, 0.4);
+      background: linear-gradient(45deg, #f0f, #f08);
       align-self: flex-start;
       color: #fff;
+      box-shadow: 0 0 10px #f0f;
     }
 
     .chat-input {
       display: flex;
-      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      border-top: 2px solid #0ff;
     }
 
     .chat-input input {
@@ -73,26 +75,28 @@
       padding: 12px;
       border: none;
       outline: none;
-      background: transparent;
-      color: #fff;
+      background: #111;
+      color: #0ff;
+      font-family: 'Orbitron', sans-serif;
     }
 
     .chat-input button {
       padding: 12px;
-      background: rgba(255, 255, 255, 0.3);
+      background: #0ff;
       border: none;
       cursor: pointer;
-      color: #000;
       font-weight: bold;
+      color: #000;
+      font-family: 'Orbitron', sans-serif;
     }
   </style>
 </head>
 <body>
   <div class="chat-container">
-    <div class="chat-header">Glass Messenger</div>
+    <div class="chat-header">Neon Messenger</div>
     <div class="chat-messages" id="messages">
-      <div class="message received">Hey! How are you?</div>
-      <div class="message sent">I’m good, working on our project!</div>
+      <div class="message received">Yo! Ready for the hackathon?</div>
+      <div class="message sent">Absolutely, let's dominate!</div>
     </div>
     <div class="chat-input">
       <input type="text" id="inputMessage" placeholder="Type a message...">
