@@ -14,11 +14,11 @@
     body {
       font-family: 'IBM Plex Mono', monospace;
       background: #000;
-      color: #00ff88;
+      color: #d400ff;
       overflow-x: hidden;
       position: relative;
     }
-    a { text-decoration: none; color: #00ff88; }
+    a { text-decoration: none; color: #d400ff; }
 
     /* ===== Background Canvas ===== */
     #code-bg {
@@ -33,11 +33,11 @@
     .glitch {
       position: relative;
       font-family: 'VT323', monospace;
-      color: #00ff88;
+      color: #d400ff;
       font-size: 3rem;
       letter-spacing: 2px;
       text-transform: uppercase;
-      text-shadow: 0 0 10px #00ff88, 0 0 20px #ff00ff;
+      text-shadow: 0 0 10px #d400ff, 0 0 20px #ff00ff;
       animation: flicker 2s infinite;
     }
     @keyframes flicker {
@@ -51,7 +51,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 15px 30px;
-      border-bottom: 2px solid #00ff88;
+      border-bottom: 2px solid #d400ff;
       background: rgba(0, 0, 0, 0.8);
       position: sticky;
       top: 0;
@@ -64,12 +64,12 @@
     }
     .logo {
       width: 40px;
-      filter: drop-shadow(0 0 5px #00ff88);
+      filter: drop-shadow(0 0 8px #d400ff);
     }
     .site-title {
       font-size: 1.5rem;
       font-family: 'VT323', monospace;
-      color: #00ff88;
+      color: #d400ff;
     }
     .navbar {
       display: flex;
@@ -96,26 +96,26 @@
       max-width: 900px;
       margin: auto;
     }
-    h2 { font-size: 2rem; margin-bottom: 15px; }
+    h2 { font-size: 2rem; margin-bottom: 15px; color: #ff00ff; text-shadow: 0 0 10px #9d00ff; }
     p { margin-bottom: 20px; line-height: 1.6; }
 
     /* ===== Buttons ===== */
     .btn-glitch {
       display: inline-block;
       padding: 12px 24px;
-      border: 2px solid #00ff88;
+      border: 2px solid #d400ff;
       background: transparent;
-      color: #00ff88;
+      color: #d400ff;
       font-weight: bold;
       text-transform: uppercase;
       transition: all 0.3s;
       position: relative;
     }
     .btn-glitch:hover {
-      background: #00ff88;
+      background: #d400ff;
       color: #000;
       text-shadow: 0 0 10px #000;
-      box-shadow: 0 0 20px #00ff88;
+      box-shadow: 0 0 20px #ff00ff;
     }
 
     /* ===== Projects Grid ===== */
@@ -127,7 +127,7 @@
     }
     .project-card {
       padding: 20px;
-      border: 2px solid #00ff88;
+      border: 2px solid #d400ff;
       background: rgba(0, 0, 0, 0.7);
       transition: transform 0.3s, box-shadow 0.3s;
     }
@@ -139,20 +139,13 @@
     /* ===== Ad Box Styling ===== */
     .ad-box {
       margin: 40px auto;
-      border: 2px dashed #00ff88;
+      border: 2px dashed #d400ff;
       padding: 10px;
       max-width: 700px;
     }
   </style>
 </head>
 <body>
-  <!-- Glitch Intro -->
-  <div id="glitch-animation" class="glitch-animation">
-    <div class="glitch" data-text="Anomaly Detected. Welcome to GlitchVerse.">
-      Anomaly Detected. Welcome to GlitchVerse.
-    </div>
-  </div>
-
   <!-- Header -->
   <header>
     <div class="logo-container">
@@ -171,20 +164,9 @@
   <main>
     <!-- Hero -->
     <section class="hero" id="home">
-      <h1 class="glitch" data-text="Glitch Lord">Glitch Lord</h1>
+      <h1 class="glitch">Glitch Lord</h1>
       <p class="tagline">Anomaly Detected. Welcome to GlitchVerse.</p>
     </section>
-
-    <!-- AdSense 1 -->
-    <div class="ad-box" style="text-align:center;">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-2671231160324600"
-           data-ad-slot="1234567890"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
 
     <!-- About -->
     <section id="about">
@@ -217,24 +199,13 @@
       <p>Reach out—anonymously, if you wish. The network is always listening.</p>
       <a href="mailto:glitchlord@protonmail.com" class="btn-glitch">Contact Glitch Lord</a>
     </section>
-
-    <!-- AdSense 2 -->
-    <div class="ad-box" style="text-align:center;">
-      <ins class="adsbygoogle"
-           style="display:block"
-           data-ad-client="ca-pub-2671231160324600"
-           data-ad-slot="9876543210"
-           data-ad-format="auto"
-           data-full-width-responsive="true"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </div>
   </main>
 
   <canvas id="code-bg"></canvas>
 
   <!-- Scripts -->
   <script>
-    /* Matrix-style background */
+    /* Purple Matrix-style background */
     const canvas = document.getElementById('code-bg');
     const ctx = canvas.getContext('2d');
     canvas.height = window.innerHeight;
@@ -248,7 +219,7 @@
     function draw() {
       ctx.fillStyle = 'rgba(0,0,0,0.05)';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
-      ctx.fillStyle = '#00ff88';
+      ctx.fillStyle = '#9d00ff'; // purple code
       ctx.font = fontSize + 'px monospace';
       for (let i = 0; i < drops.length; i++) {
         const text = letters[Math.floor(Math.random() * letters.length)];
